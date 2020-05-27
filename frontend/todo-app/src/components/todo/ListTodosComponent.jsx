@@ -1,5 +1,4 @@
 import React,{Component} from 'react'
-import AuthenticationService from './AuthenticationService.js';
 
 class ListTodosComponent extends Component{
   constructor(props){
