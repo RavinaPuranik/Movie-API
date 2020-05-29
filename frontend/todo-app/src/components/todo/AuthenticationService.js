@@ -1,16 +1,22 @@
-class AuthenticationService{
-  registerSuccessfulLogin(username,password){
-    sessionStorage.setItem('authenticatedUser',username);
+class AuthenticationService {
+  registerSuccessfulLogin(username, password) {
+    sessionStorage.setItem("authenticatedUser", username);
   }
 
-  logout(){
-    sessionStorage.removeItem('authenticatedUser');
+  logout() {
+    sessionStorage.removeItem("authenticatedUser");
   }
 
-  isUserLoggedIn(){
-    let user=sessionStorage.getItem('authenticatedUser');
-    if(user===null) return false
-    return true
+  isUserLoggedIn() {
+    let user = sessionStorage.getItem("authenticatedUser");
+    if (user === null) return false;
+    return true;
+  }
+
+  getLoggedInUserName() {
+    let user = sessionStorage.getItem("authenticatedUser");
+    if (user === null) return "";
+    return user;
   }
 }
-export default new AuthenticationService()
+export default new AuthenticationService();
