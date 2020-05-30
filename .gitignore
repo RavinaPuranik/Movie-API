@@ -1,28 +1,24 @@
-# Java related
-target/**
-*.jar
-*.war
-*.ear
-*.class
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# eclipse specific
-*.pydevproject
-.project
-.metadata
-bin/**
-tmp/**
-tmp/**/*
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.classpath
-.settings/
-.loadpath
+# dependencies
+/node_modules
 
-# External tool builders
-.externalToolBuilders/
+# testing
+/coverage
 
-# Locally stored "Eclipse launch configurations"
-*.launch
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+
