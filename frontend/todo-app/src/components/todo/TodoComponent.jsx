@@ -21,10 +21,11 @@ class TodoComponent extends Component {
     let todo = {
       id: this.state.id,
       description: values.description,
-      targetDate: values.targetDate
+      targetDate: values.targetDate,
+      isDone:false
     }
      if (this.state.id == -1) {
-       TodoDataService.createTodo(username,this.state.id,todo).then(() =>
+       TodoDataService.createTodo(username,todo).then(() =>
          this.props.history.push("/todo")
        );
      } else {
